@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		0714DAA1256705FE007B4068 /* Queue To Do - CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Queue To Do - CPP"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0714DAA4256705FE007B4068 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0714DAAC25670621007B4068 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				0714DAA4256705FE007B4068 /* main.cpp */,
+				0714DAAC25670621007B4068 /* README.md */,
 			);
 			path = "Queue To Do - CPP";
 			sourceTree = "<group>";
