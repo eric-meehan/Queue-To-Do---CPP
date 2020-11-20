@@ -3,6 +3,9 @@ Queue To Do
 
 This problem was presented to me as part of the Google FooBar challenge.  Though the constraints specify using Python or Java, this solution is written in C++ to demonstrate proficiency in that language.
 
+The program was compiled in MacOS Catalina, v 10.15.7 using GCC through the command:
+g++ main.cpp -o main.exe
+
 
 You're almost ready to make your move to destroy the LAMBCHOP doomsday device, but the security checkpoints that guard the underlying systems of the LAMBCHOP are going to be a problem. You were able to take one down without tripping any alarms, which is great! Except that as Commander Lambda's assistant, you've learned that the checkpoints are about to come under automated review, which means that your sabotage will be discovered and your cover blown - unless you can trick the automated review system.
 

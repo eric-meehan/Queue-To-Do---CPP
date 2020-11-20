@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <string>
 
 // Function Prototypes
 int SequentialXOR(int);
@@ -14,12 +15,53 @@ int XORRows(int, int);
 
 
 int main(int argc, const char * argv[]) {
-    int * table = Table(17, 4);
-    int CumulativeXOR = 0;
-    for (int i = 0; i < 4; i++)
+    // Required parameters
+    int Start;
+    int Length;
+    // Users may specify the start position and line length through command line arguments
+    if (argc > 1)
     {
-        CumulativeXOR ^= XORRows((17 + (4 * i)), table[i]);
+        // These arguments will need to be cast as integers
+        std::string arg;
+        // Get Start from the first argument
+        arg = argv[1];
+        try
+        {
+            Start = std::stoi(arg);
+        }
+        catch(std::invalid_argument)
+        {
+            std::cout << "Invalid argument" << std::endl;
+            return 1;
+        }
+        // Get the Length from the second argument
+        arg = argv[2];
+        try
+        {
+            Length = std::stoi(arg);
+        }
+        catch (std::invalid_argument)
+        {
+            std::cout << "Invalid argument" << std::endl;
+            return 1;
+        }
     }
+    // Alternatively, a default Start and Length of 17 and 4 will be used respectively
+    else
+    {
+        Start = 17;
+        Length = 4;
+    }
+    // Generate the table endpoints
+    int * table = Table(Start, Length);
+    // Create the CumulativeXOR checksum
+    int CumulativeXOR = 0;
+    // Use the SequentialXOR function on each row, combining the result with the CumulativeXOR
+    for (int i = 0; i < Length; i++)
+    {
+        CumulativeXOR ^= XORRows((Start + (Length * i)), table[i]);
+    }
+    // Output the result
     std::cout << CumulativeXOR << std::endl;
     return 0;
 }
